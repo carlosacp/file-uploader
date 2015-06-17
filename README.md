@@ -48,3 +48,51 @@ meteor
 > remember to commit all your changes before running git submodule update as if there are changes they will be overwritten!
 
 * [Why git submodule is bad](https://codingkilledthecat.wordpress.com/2012/04/28/why-your-company-shouldnt-use-git-submodules).
+
+# If you need to make changes to submodule (IMPORTANT!)
+
+* go to submodule dir
+
+```
+cd packages/meteor-file-uploader
+```
+
+* checkout submodule master (if you change submodule before this step your changes will be lost)
+
+```
+git checkout master
+```
+
+* make the changes you desire
+
+* commit submodule changes
+
+```
+git commit -am "<message>"
+```
+
+* push submodule changes
+
+```
+git push
+```
+
+* go to parent project
+
+```
+cd ../../
+```
+
+* add new submodule version
+
+```
+git add packages/meteor-file-uploader
+```
+
+* commit this change
+
+```
+git commit -m "submodule packages/meteor-file-uploader update"
+```
+
+* keep going with your work. Please, don't take too long to push your changes.
