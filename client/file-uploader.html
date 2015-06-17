@@ -1,0 +1,16 @@
+<head>
+  <title>file-uploader</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <form id="formUpload" action="/upload" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="fileToUpload" id="fileToUpload">
+  </form>
+</template>

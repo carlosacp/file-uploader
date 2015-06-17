@@ -1,0 +1,3 @@
+[submodule "packages/meteor-file-uploader"]
+	path = packages/meteor-file-uploader
+	url = git@github.com:carlosacp/meteor-file-uploader.git
