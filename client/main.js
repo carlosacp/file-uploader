@@ -1,10 +1,17 @@
-Session.setDefault('counter', 0);
+var uploadProgressEql = function(oldValue, newValue){
+  return oldValue.value === newValue.value;
+};
 
-Template.hello.helpers({
-  counter: function () {
-    return Session.get('counter');
-  }
+var UploadProgress = new ReactiveVar({
+  value: 0,
+}, uploadProgressEql);
+
+Template.progress.helpers({
+  value: function(){
+    return UploadProgress.get().value;
+  },
 });
+
 
 Template.hello.events({
   'change #fileToUpload': function (event) {
@@ -13,12 +20,12 @@ Template.hello.events({
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
       if (request.readyState == 4) {
-        console.log("finalizado");
+        console.log("finished")
       };
     };
     request.upload.addEventListener('progress', function(event){
       var progress = Math.ceil((event.loaded / event.total) * 100);
-      console.log("progress " + progress);
+      UploadProgress.set({value: progress});
     });
 
     request.open('POST', '/upload');

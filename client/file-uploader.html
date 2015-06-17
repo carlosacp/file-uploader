@@ -6,6 +6,7 @@
   <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
+  {{> progress}}
 </body>
 
 <template name="hello">
@@ -13,4 +14,8 @@
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
   </form>
+</template>
+
+<template name="progress">
+  {{ value }}%
 </template>
