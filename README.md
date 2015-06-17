@@ -43,6 +43,8 @@ meteor
 
 > always publish the submodule change before publishing the change to the superproject that references it
 
+[see here](http://stackoverflow.com/questions/5814319/git-submodule-push)
+
 > remember to commit all your changes before running git submodule update as if there are changes they will be overwritten!
 
 * [Why git submodule is bad](https://codingkilledthecat.wordpress.com/2012/04/28/why-your-company-shouldnt-use-git-submodules).
