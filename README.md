@@ -33,7 +33,7 @@ git submodule update
 meteor
 ```
 
-# Quick references (please, read this before commit)
+## Quick references (please, read this before commit)
 
 * [Working with git submodule](https://chrisjean.com/git-submodules-adding-using-removing-and-updating).
 
@@ -49,7 +49,7 @@ meteor
 
 * [Why git submodule is bad](https://codingkilledthecat.wordpress.com/2012/04/28/why-your-company-shouldnt-use-git-submodules).
 
-# If you need to make changes to submodule (IMPORTANT!)
+## If you need to make changes to submodule (IMPORTANT!)
 
 * go to submodule dir
 
