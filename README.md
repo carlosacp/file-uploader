@@ -63,7 +63,7 @@ cd packages/meteor-file-uploader
 git checkout master
 ```
 
-* make the changes you desire
+* **ONLY NOW** you can make the changes you desire
 
 * commit submodule changes
 
